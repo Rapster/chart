@@ -15,32 +15,24 @@
 */
 package be.ceau.chart;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-
+import be.ceau.chart.color.Color;
 import be.ceau.chart.data.BarData;
 import be.ceau.chart.data.Data;
 import be.ceau.chart.dataset.BarDataset;
+import be.ceau.chart.enums.*;
+import be.ceau.chart.gson.GSON;
 import be.ceau.chart.options.BarOptions;
+import be.ceau.chart.options.Legend;
 import be.ceau.chart.options.Options;
 import be.ceau.chart.options.scales.XAxis;
 import be.ceau.chart.options.scales.YAxis;
 import be.ceau.chart.options.ticks.LinearTicks;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE)
 public class BarChart implements Chart {
-
-	private static final ObjectWriter WRITER = new ObjectMapper()
-			.writerWithDefaultPrettyPrinter()
-			.forType(BarChart.class);
 
 	/**
 	 * Static factory, constructs an {@link Data} implementation appropriate for
@@ -62,7 +54,7 @@ public class BarChart implements Chart {
 		return new BarOptions();
 	}
 
-	@JsonIgnore
+	@Expose(serialize = false, deserialize = false)
 	private boolean vertical = true;
 
 	private BarData data;
@@ -111,7 +103,7 @@ public class BarChart implements Chart {
 	 * @see #setVertical()
 	 */
 	public BarChart setHorizontal() {
-		this.vertical = false;
+		vertical = false;
 		return this;
 	}
 
@@ -120,7 +112,7 @@ public class BarChart implements Chart {
 	 * @see #setHorizontal()
 	 */
 	public boolean isHorizontal() {
-		return !this.vertical;
+		return !vertical;
 	}
 
 	/**
@@ -135,7 +127,7 @@ public class BarChart implements Chart {
 	 * @see #setHorizontal()
 	 */
 	public BarChart setVertical() {
-		this.vertical = true;
+		vertical = true;
 		return this;
 	}
 
@@ -144,22 +136,18 @@ public class BarChart implements Chart {
 	 * @see #setVertical()
 	 */
 	public boolean isVertical() {
-		return this.vertical;
+		return vertical;
 	}
 
 	@Override
-	@JsonProperty("type")
+	@SerializedName("type")
 	public String getType() {
-		return this.vertical ? "bar" : "horizontalBar";
+		return vertical ? "bar" : "horizontalBar";
 	}
 
 	@Override
 	public String toJson() {
-		try {
-			return WRITER.writeValueAsString(this);
-		} catch (JsonProcessingException e) {
-			throw new RuntimeException(e);
-		}
+		return GSON.INSTANCE.toJson(this);
 	}
 
 	/**

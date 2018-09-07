@@ -15,23 +15,16 @@
 */
 package be.ceau.chart.options.scales;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.objects.OptionalArray;
+
+import java.util.List;
 
 /**
  * The grid line configuration is nested under the scale configuration in the
  * gridLines key. It defines options for the grid lines that run perpendicular
  * to the axis.
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class GridLines {
 
 	/**
@@ -47,7 +40,7 @@ public class GridLines {
 	/**
 	 * @see #setLineWidth(List)
 	 */
-	private List<Integer> lineWidth = new OptionalArray<Integer>();
+	private final List<Integer> lineWidth = new OptionalArray<Integer>();
 
 	/**
 	 * @see #setDrawBorder(Boolean)
@@ -88,7 +81,7 @@ public class GridLines {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-		return this.display;
+		return display;
 	}
 
 	/**
@@ -109,7 +102,7 @@ public class GridLines {
 	 * @see #setColor(List)
 	 */
 	public List<Color> getColor() {
-		return this.color;
+		return color;
 	}
 
 	/**
@@ -141,7 +134,7 @@ public class GridLines {
 	 * @see #setLineWidth(List)
 	 */
 	public List<Integer> getLineWidth() {
-		return this.lineWidth;
+		return lineWidth;
 	}
 
 	/**
@@ -173,7 +166,7 @@ public class GridLines {
 	 * @see #setDrawBorder(Boolean)
 	 */
 	public Boolean getDrawBorder() {
-		return this.drawBorder;
+		return drawBorder;
 	}
 
 	/**
@@ -194,7 +187,7 @@ public class GridLines {
 	 * @see #setDrawOnChartArea(Boolean)
 	 */
 	public Boolean getDrawOnChartArea() {
-		return this.drawOnChartArea;
+		return drawOnChartArea;
 	}
 
 	/**
@@ -217,7 +210,7 @@ public class GridLines {
 	 * @see #setDrawTicks(Boolean)
 	 */
 	public Boolean getDrawTicks() {
-		return this.drawTicks;
+		return drawTicks;
 	}
 
 	/**
@@ -238,7 +231,7 @@ public class GridLines {
 	 * @see #setTickMarkLength(Integer)
 	 */
 	public Integer getTickMarkLength() {
-		return this.tickMarkLength;
+		return tickMarkLength;
 	}
 
 	/**
@@ -259,7 +252,7 @@ public class GridLines {
 	 * @see #setZeroLineWidth(Integer)
 	 */
 	public Integer getZeroLineWidth() {
-		return this.zeroLineWidth;
+		return zeroLineWidth;
 	}
 
 	/**
@@ -280,7 +273,7 @@ public class GridLines {
 	 * @see #setZeroLineColor(Color)
 	 */
 	public Color getZeroLineColor() {
-		return this.zeroLineColor;
+		return zeroLineColor;
 	}
 
 	/**
@@ -301,7 +294,7 @@ public class GridLines {
 	 * @see #setOffsetGridLines(Boolean)
 	 */
 	public Boolean getOffsetGridLines() {
-		return this.offsetGridLines;
+		return offsetGridLines;
 	}
 
 	/**

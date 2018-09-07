@@ -15,16 +15,11 @@
 */
 package be.ceau.chart.options.elements;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.BorderCapStyle;
 import be.ceau.chart.enums.BorderJoinStyle;
+
+import java.util.List;
 
 /**
  * <p>
@@ -35,8 +30,6 @@ import be.ceau.chart.enums.BorderJoinStyle;
  * overridden by the configuration attached to a dataset.
  * </p>
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Line {
 
 	/**
@@ -98,7 +91,7 @@ public class Line {
 	 * @see #setTension(Float)
 	 */
 	public Float getTension() {
-		return this.tension;
+		return tension;
 	}
 
 	/**
@@ -119,7 +112,7 @@ public class Line {
 	 * @see #setBackgroundColor(Color)
 	 */
 	public Color getBackgroundColor() {
-		return this.backgroundColor;
+		return backgroundColor;
 	}
 
 	/**
@@ -140,7 +133,7 @@ public class Line {
 	 * @see #setBorderWidth(Integer)
 	 */
 	public Integer getBorderWidth() {
-		return this.borderWidth;
+		return borderWidth;
 	}
 
 	/**
@@ -161,7 +154,7 @@ public class Line {
 	 * @see #setBorderColor(Color)
 	 */
 	public Color getBorderColor() {
-		return this.borderColor;
+		return borderColor;
 	}
 
 	/**
@@ -182,7 +175,7 @@ public class Line {
 	 * @see #setBorderCapStyle(BorderCapStyle)
 	 */
 	public BorderCapStyle getBorderCapStyle() {
-		return this.borderCapStyle;
+		return borderCapStyle;
 	}
 
 	/**
@@ -210,7 +203,7 @@ public class Line {
 	 * @see #setBorderDash(List)
 	 */
 	public List<Integer> getBorderDash() {
-		return this.borderDash;
+		return borderDash;
 	}
 
 	/**
@@ -238,7 +231,7 @@ public class Line {
 	 * @see #setBorderDashOffset(Float)
 	 */
 	public Float getBorderDashOffset() {
-		return this.borderDashOffset;
+		return borderDashOffset;
 	}
 
 	/**
@@ -260,7 +253,7 @@ public class Line {
 	 * @see #setBorderJoinStyle(BorderJoinStyle)
 	 */
 	public BorderJoinStyle getBorderJoinStyle() {
-		return this.borderJoinStyle;
+		return borderJoinStyle;
 	}
 
 	/**
@@ -294,7 +287,7 @@ public class Line {
 	 * @see #setCapBezierPoints(Boolean)
 	 */
 	public Boolean getCapBezierPoints() {
-		return this.capBezierPoints;
+		return capBezierPoints;
 	}
 
 	/**
@@ -316,7 +309,7 @@ public class Line {
 	 * @see #setFill(Boolean)
 	 */
 	public Boolean getFill() {
-		return this.fill;
+		return fill;
 	}
 
 	/**
@@ -337,7 +330,7 @@ public class Line {
 	 * @see #setStepped(Boolean)
 	 */
 	public Boolean getStepped() {
-		return this.stepped;
+		return stepped;
 	}
 
 	/**

@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.elements.RadarElements;
 import be.ceau.chart.options.scales.RadialLinearScale;
 import be.ceau.chart.options.scales.Scale;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class RadarOptions extends Options<RadarOptions> {
 
 	/**
@@ -52,7 +45,7 @@ public class RadarOptions extends Options<RadarOptions> {
 	 * @see #setScale(RadialLinearScale)
 	 */
 	public RadialLinearScale getScale() {
-		return this.scale;
+		return scale;
 	}
 
 	/**
@@ -68,7 +61,7 @@ public class RadarOptions extends Options<RadarOptions> {
 	 * @see #setElements(RadarElements)
 	 */
 	public RadarElements getElements() {
-		return this.elements;
+		return elements;
 	}
 
 	/**

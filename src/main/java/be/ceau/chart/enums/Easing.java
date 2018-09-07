@@ -17,8 +17,6 @@ package be.ceau.chart.enums;
 
 import java.util.Locale;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
  * Enumeration of easing functions, based on Robert Penner's
  * <a href="http://robertpenner.com/easing/">list</a>
@@ -69,13 +67,12 @@ public enum Easing {
 				sb.append(s.substring(1).toLowerCase(Locale.ENGLISH));
 			}
 		}
-		this.serialized = sb.toString();
+        serialized = sb.toString();
 	}
 
 	@Override
-	@JsonValue
 	public String toString() {
-		return this.serialized;
+		return serialized;
 	}
 
 }

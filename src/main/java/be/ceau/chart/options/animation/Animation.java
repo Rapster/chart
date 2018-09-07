@@ -15,16 +15,9 @@
 */
 package be.ceau.chart.options.animation;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.enums.Easing;
 import be.ceau.chart.javascript.JavaScriptFunction;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Animation<T extends Animation<T>> {
 
 	/**
@@ -52,7 +45,7 @@ public class Animation<T extends Animation<T>> {
 	 * @see #setDuration(Integer)
 	 */
 	public Integer getDuration() {
-		return this.duration;
+		return duration;
 	}
 
 	/**
@@ -75,7 +68,7 @@ public class Animation<T extends Animation<T>> {
 	 * @see #setEasing(Easing)
 	 */
 	public Easing getEasing() {
-		return this.easing;
+		return easing;
 	}
 
 	/**
@@ -103,7 +96,7 @@ public class Animation<T extends Animation<T>> {
 	 * @see #setOnProgress(JavaScriptFunction onProgress)
 	 */
 	public JavaScriptFunction getOnProgress() {
-		return this.onProgress;
+		return onProgress;
 	}
 
 	/**
@@ -128,7 +121,7 @@ public class Animation<T extends Animation<T>> {
 	 * @see #setOnComplete(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getOnComplete() {
-		return this.onComplete;
+		return onComplete;
 	}
 
 	/**

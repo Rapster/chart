@@ -15,11 +15,11 @@
 */
 package be.ceau.chart.dataset;
 
-import java.util.Arrays;
-import java.util.List;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.objects.OptionalArray;
+
+import java.util.Arrays;
+import java.util.List;
 
 public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHoverDataset<T, O>, O> extends Dataset<T, O> {
 
@@ -57,7 +57,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setBackgroundColor(List)
 	 */
 	public List<Color> getBackgroundColor() {
-	    return this.backgroundColor;
+	    return backgroundColor;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	@SuppressWarnings("unchecked")
 	public T addBackgroundColors(Color... backgroundColors) {
 	    if (backgroundColors != null) {
-	    	this.backgroundColor.addAll(Arrays.asList(backgroundColors));
+            backgroundColor.addAll(Arrays.asList(backgroundColors));
 	    }
 	    return (T) this;
 	}
@@ -108,7 +108,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setBorderColor(List)
 	 */
 	public List<Color> getBorderColor() {
-	    return this.borderColor;
+	    return borderColor;
 	}
 
 	/**
@@ -128,7 +128,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	@SuppressWarnings("unchecked")
 	public T addBorderColors(Color... borderColors) {
 	    if (borderColors != null) {
-	    	this.borderColor.addAll(Arrays.asList(borderColors));
+            borderColor.addAll(Arrays.asList(borderColors));
 	    }
 	    return (T) this;
 	}
@@ -159,7 +159,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setBorderWidth(List)
 	 */
 	public List<Integer> getBorderWidth() {
-	    return this.borderWidth;
+	    return borderWidth;
 	}
 
 	/**
@@ -199,7 +199,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setHoverBackgroundColor(List)
 	 */
 	public List<Color> getHoverBackgroundColor() {
-	    return this.hoverBackgroundColor;
+	    return hoverBackgroundColor;
 	}
 
 	/**
@@ -239,7 +239,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setHoverBorderColor(List)
 	 */
 	public List<Color> getHoverBorderColor() {
-	    return this.hoverBorderColor;
+	    return hoverBorderColor;
 	}
 
 	/**
@@ -279,7 +279,7 @@ public abstract class BackgroundBorderHoverDataset<T extends BackgroundBorderHov
 	 * @see #setHoverBorderWidth(List)
 	 */
 	public List<Integer> getHoverBorderWidth() {
-	    return this.hoverBorderWidth;
+	    return hoverBorderWidth;
 	}
 
 	/**

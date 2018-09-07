@@ -15,11 +15,6 @@
 */
 package be.ceau.chart.options.scales;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.ticks.LinearTicks;
 
 /**
@@ -28,8 +23,6 @@ import be.ceau.chart.options.ticks.LinearTicks;
  * to use one of these scales for the x axis. As the name suggests, linear
  * interpolation is used to determine where a value lies on the axis.
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class LinearScale extends Scale<LinearScale> {
 
 	private final String type = "linear";
@@ -39,7 +32,7 @@ public class LinearScale extends Scale<LinearScale> {
 	private Boolean stacked;
 	
 	public String getType() {
-		return this.type;
+		return type;
 	}
 	
 	public Boolean getStacked() {

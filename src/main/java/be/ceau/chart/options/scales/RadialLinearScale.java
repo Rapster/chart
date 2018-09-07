@@ -15,11 +15,6 @@
 */
 package be.ceau.chart.options.scales;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.ticks.RadialLinearTicks;
 import be.ceau.chart.options.ticks.Ticks;
 
@@ -28,8 +23,6 @@ import be.ceau.chart.options.ticks.Ticks;
  * chart types. It overlays the chart area, rather than being positioned on one
  * of the edges.
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class RadialLinearScale extends Scale<RadialLinearScale> {
 
 	private final String type = "radialLinear";
@@ -62,7 +55,7 @@ public class RadialLinearScale extends Scale<RadialLinearScale> {
 	 * @see #setLineArc(Boolean)
 	 */
 	public Boolean getLineArc() {
-	    return this.lineArc;
+	    return lineArc;
 	}
 
 	/**
@@ -83,7 +76,7 @@ public class RadialLinearScale extends Scale<RadialLinearScale> {
 	 * @see #setAngleLines(AngleLines)
 	 */
 	public AngleLines getAngleLines() {
-	    return this.angleLines;
+	    return angleLines;
 	}
 
 	/**
@@ -104,7 +97,7 @@ public class RadialLinearScale extends Scale<RadialLinearScale> {
 	 * @see #setPointLabels(PointLabels)
 	 */
 	public PointLabels getPointLabels() {
-	    return this.pointLabels;
+	    return pointLabels;
 	}
 
 	/**
@@ -124,8 +117,9 @@ public class RadialLinearScale extends Scale<RadialLinearScale> {
 	/**
 	 * @see #setTicks(Ticks)
 	 */
+	@Override
 	public Ticks<RadialLinearTicks> getTicks() {
-	    return this.ticks;
+	    return ticks;
 	}
 
 	/**

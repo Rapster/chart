@@ -17,8 +17,6 @@ package be.ceau.chart.enums;
 
 import java.util.Locale;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 public enum FontStyle {
 
 	BOLD,
@@ -31,13 +29,12 @@ public enum FontStyle {
 	private final String serialized;
 
 	private FontStyle() {
-		this.serialized = name().toLowerCase(Locale.ENGLISH);
+        serialized = name().toLowerCase(Locale.ENGLISH);
 	}
 
 	@Override
-	@JsonValue
 	public String toString() {
-		return this.serialized;
+		return serialized;
 	}
 
 }

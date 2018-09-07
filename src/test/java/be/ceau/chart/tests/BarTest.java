@@ -15,10 +15,6 @@
 */
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import be.ceau.chart.BarChart;
 import be.ceau.chart.Chart;
 import be.ceau.chart.color.Color;
@@ -29,6 +25,9 @@ import be.ceau.chart.options.scales.BarScale;
 import be.ceau.chart.options.ticks.LinearTicks;
 import be.ceau.chart.tests.util.Opener;
 import be.ceau.chart.tests.util.TestFactory;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class BarTest extends ChartTest {
 

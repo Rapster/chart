@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options.ticks;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.math.BigDecimal;
+
 public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 
 	/**
@@ -116,7 +109,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setBackdropColor(Color backdropColor)
 	 */
 	public Color getBackdropColor() {
-		return this.backdropColor;
+		return backdropColor;
 	}
 
 	/**
@@ -131,7 +124,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setBackdropPaddingX(BigDecimal backdropPaddingX)
 	 */
 	public BigDecimal getBackdropPaddingX() {
-		return this.backdropPaddingX;
+		return backdropPaddingX;
 	}
 
 	/**
@@ -146,7 +139,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setBackdropPaddingY(BigDecimal backdropPaddingY)
 	 */
 	public BigDecimal getBackdropPaddingY() {
-		return this.backdropPaddingY;
+		return backdropPaddingY;
 	}
 
 	/**
@@ -161,7 +154,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setBeginAtZero(Boolean beginAtZero)
 	 */
 	public Boolean getBeginAtZero() {
-		return this.beginAtZero;
+		return beginAtZero;
 	}
 
 	/**
@@ -176,7 +169,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setMin(BigDecimal min)
 	 */
 	public BigDecimal getMin() {
-		return this.min;
+		return min;
 	}
 
 	/**
@@ -192,7 +185,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setMax(BigDecimal max)
 	 */
 	public BigDecimal getMax() {
-		return this.max;
+		return max;
 	}
 
 	/**
@@ -208,7 +201,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setMaxTicksLimit(BigDecimal maxTicksLimit)
 	 */
 	public BigDecimal getMaxTicksLimit() {
-		return this.maxTicksLimit;
+		return maxTicksLimit;
 	}
 
 	/**
@@ -224,7 +217,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setShowLabelBackdrop(Boolean showLabelBackdrop)
 	 */
 	public Boolean getShowLabelBackdrop() {
-		return this.showLabelBackdrop;
+		return showLabelBackdrop;
 	}
 
 	/**
@@ -239,7 +232,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setStepSize(BigDecimal fixedStepSize)
 	 */
 	public BigDecimal getFixedStepSize() {
-		return this.fixedStepSize;
+		return fixedStepSize;
 	}
 
 	/**
@@ -257,7 +250,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setStepSize(BigDecimal stepSize)
 	 */
 	public BigDecimal getStepSize() {
-		return this.stepSize;
+		return stepSize;
 	}
 
 	/**
@@ -273,7 +266,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setSuggestedMax(BigDecimal suggestedMax)
 	 */
 	public BigDecimal getSuggestedMax() {
-		return this.suggestedMax;
+		return suggestedMax;
 	}
 
 	/**
@@ -289,7 +282,7 @@ public class RadialLinearTicks extends Ticks<RadialLinearTicks> {
 	 * @see #setSuggestedMin(BigDecimal suggestedMin)
 	 */
 	public BigDecimal getSuggestedMin() {
-		return this.suggestedMin;
+		return suggestedMin;
 	}
 
 	/**

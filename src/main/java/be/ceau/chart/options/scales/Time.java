@@ -17,13 +17,6 @@ package be.ceau.chart.options.scales;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Time {
 
 	/**
@@ -93,7 +86,7 @@ public class Time {
 	 * @see #setDisplayFormats(DisplayFormats)
 	 */
 	public DisplayFormats getDisplayFormats() {
-		return this.displayFormats;
+		return displayFormats;
 	}
 
 	/**
@@ -108,7 +101,7 @@ public class Time {
 	 * @see #setIsoWeekday(Boolean)
 	 */
 	public Boolean getIsoWeekday() {
-		return this.isoWeekday;
+		return isoWeekday;
 	}
 
 	/**
@@ -123,7 +116,7 @@ public class Time {
 	 * @see #setMax(Time)
 	 */
 	public Time getMax() {
-		return this.max;
+		return max;
 	}
 
 	/**
@@ -138,7 +131,7 @@ public class Time {
 	 * @see #setMin(Time)
 	 */
 	public Time getMin() {
-		return this.min;
+		return min;
 	}
 
 	/**
@@ -153,7 +146,7 @@ public class Time {
 	 * @see #setParser(String)
 	 */
 	public String getParser() {
-		return this.parser;
+		return parser;
 	}
 
 	/**
@@ -170,7 +163,7 @@ public class Time {
 	 * @see #setRound(String)
 	 */
 	public String getRound() {
-		return this.round;
+		return round;
 	}
 
 	/**
@@ -186,7 +179,7 @@ public class Time {
 	 * @see #setTooltipFormat(String)
 	 */
 	public String getTooltipFormat() {
-		return this.tooltipFormat;
+		return tooltipFormat;
 	}
 
 	/**
@@ -201,7 +194,7 @@ public class Time {
 	 * @see #setUnit(String)
 	 */
 	public String getUnit() {
-		return this.unit;
+		return unit;
 	}
 
 	/**
@@ -217,7 +210,7 @@ public class Time {
 	 * @see #setUnitStepSize(BigDecimal)
 	 */
 	public BigDecimal getUnitStepSize() {
-		return this.unitStepSize;
+		return unitStepSize;
 	}
 
 	/**

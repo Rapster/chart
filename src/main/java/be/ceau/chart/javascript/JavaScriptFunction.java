@@ -15,15 +15,13 @@
 */
 package be.ceau.chart.javascript;
 
-import java.io.IOException;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonSerializer;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import java.lang.reflect.Type;
 
-@JsonSerialize(using = JavaScriptFunction.Serializer.class)
 public class JavaScriptFunction {
 
 	private final String function;
@@ -36,13 +34,11 @@ public class JavaScriptFunction {
 		return function;
 	}
 
-	public static class Serializer extends JsonSerializer<JavaScriptFunction> {
+	public static class JavaScriptFunctionSerializer implements JsonSerializer<JavaScriptFunction> {
 
 		@Override
-		public void serialize(JavaScriptFunction value, JsonGenerator gen, SerializerProvider serializers) throws IOException, JsonProcessingException {
-			gen.writeRawValue(value.function);
+		public JsonElement serialize(JavaScriptFunction src, Type typeOfSrc, JsonSerializationContext context) {
+			return new JsonPrimitive(src.function);
 		}
-
 	}
-
 }

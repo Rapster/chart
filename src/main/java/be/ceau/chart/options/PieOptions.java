@@ -15,18 +15,11 @@
 */
 package be.ceau.chart.options;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.animation.PieAnimation;
 import be.ceau.chart.options.elements.ArcElements;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.math.BigDecimal;
+
 public class PieOptions extends Options<PieOptions> {
 
 	/**
@@ -63,7 +56,7 @@ public class PieOptions extends Options<PieOptions> {
 	 * @see #setCutoutPercentage(BigDecimal cutoutPercentage)
 	 */
 	public BigDecimal getCutoutPercentage() {
-	    return this.cutoutPercentage;
+	    return cutoutPercentage;
 	}
 
 	/**
@@ -78,7 +71,7 @@ public class PieOptions extends Options<PieOptions> {
 	 * @see #setRotation(BigDecimal rotation)
 	 */
 	public BigDecimal getRotation() {
-	    return this.rotation;
+	    return rotation;
 	}
 
 	/**
@@ -93,7 +86,7 @@ public class PieOptions extends Options<PieOptions> {
 	 * @see #setCircumference(BigDecimal circumference)
 	 */
 	public BigDecimal getCircumference() {
-	    return this.circumference;
+	    return circumference;
 	}
 
 	/**
@@ -109,7 +102,7 @@ public class PieOptions extends Options<PieOptions> {
 	 */
 	@Override
 	public PieAnimation getAnimation() {
-	    return this.animation;
+	    return animation;
 	}
 
 	/**

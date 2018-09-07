@@ -15,9 +15,13 @@
 */
 package be.ceau.chart.enums;
 
-import java.util.Locale;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 
-import com.fasterxml.jackson.annotation.JsonValue;
+import java.lang.reflect.Type;
+import java.util.Locale;
 
 public enum BorderCapStyle {
 
@@ -40,13 +44,11 @@ public enum BorderCapStyle {
 	private final String serialized;
 
 	private BorderCapStyle() {
-		this.serialized = name().toLowerCase(Locale.ENGLISH);
+		serialized = name().toLowerCase(Locale.ENGLISH);
 	}
 
 	@Override
-	@JsonValue
 	public String toString() {
-		return this.serialized;
+		return serialized;
 	}
-
 }

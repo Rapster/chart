@@ -15,28 +15,15 @@
 */
 package be.ceau.chart;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-
 import be.ceau.chart.data.Data;
 import be.ceau.chart.data.ScatterLineData;
 import be.ceau.chart.dataset.ScatterLineDataset;
+import be.ceau.chart.gson.GSON;
 import be.ceau.chart.options.LineOptions;
 import be.ceau.chart.options.Options;
 import be.ceau.chart.options.scales.LinearScale;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE)
 public class ScatterLineChart implements Chart {
-
-	private static final ObjectWriter WRITER = new ObjectMapper()
-			.writerWithDefaultPrettyPrinter()
-			.forType(ScatterLineChart.class);
 
 	/**
 	 * Static factory, constructs an {@link Data} implementation appropriate
@@ -101,11 +88,7 @@ public class ScatterLineChart implements Chart {
 
 	@Override
 	public String toJson() {
-		try {
-			return WRITER.writeValueAsString(this);
-		} catch (JsonProcessingException e) {
-			throw new RuntimeException(e);
-		}
+		return GSON.INSTANCE.toJson(this);
 	}
 	
 	/**

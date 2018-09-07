@@ -15,19 +15,12 @@
 */
 package be.ceau.chart.options.scales;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 
 /**
  * Options to configure angled lines that radiate from the center of the chart
  * to the point labels.
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class AngleLines {
 
 	/**
@@ -49,7 +42,7 @@ public class AngleLines {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-	    return this.display;
+	    return display;
 	}
 
 	/**
@@ -70,7 +63,7 @@ public class AngleLines {
 	 * @see #setColor(Color)
 	 */
 	public Color getColor() {
-	    return this.color;
+	    return color;
 	}
 
 	/**
@@ -91,7 +84,7 @@ public class AngleLines {
 	 * @see #setLineWidth(Integer)
 	 */
 	public Integer getLineWidth() {
-	    return this.lineWidth;
+	    return lineWidth;
 	}
 
 	/**

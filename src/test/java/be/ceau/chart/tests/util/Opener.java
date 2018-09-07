@@ -15,12 +15,12 @@
 */
 package be.ceau.chart.tests.util;
 
-import java.awt.Desktop;
+import be.ceau.chart.Chart;
+
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import be.ceau.chart.Chart;
 
 public class Opener {
 

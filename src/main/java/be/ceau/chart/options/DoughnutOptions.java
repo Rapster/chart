@@ -15,18 +15,11 @@
 */
 package be.ceau.chart.options;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.animation.DoughnutAnimation;
 import be.ceau.chart.options.elements.ArcElements;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.math.BigDecimal;
+
 public class DoughnutOptions extends Options<DoughnutOptions> {
 
 	/**
@@ -63,7 +56,7 @@ public class DoughnutOptions extends Options<DoughnutOptions> {
 	 * @see #setCutoutPercentage(BigDecimal cutoutPercentage)
 	 */
 	public BigDecimal getCutoutPercentage() {
-		return this.cutoutPercentage;
+		return cutoutPercentage;
 	}
 
 	/**
@@ -78,7 +71,7 @@ public class DoughnutOptions extends Options<DoughnutOptions> {
 	 * @see #setRotation(BigDecimal rotation)
 	 */
 	public BigDecimal getRotation() {
-		return this.rotation;
+		return rotation;
 	}
 
 	/**
@@ -93,7 +86,7 @@ public class DoughnutOptions extends Options<DoughnutOptions> {
 	 * @see #setCircumference(BigDecimal circumference)
 	 */
 	public BigDecimal getCircumference() {
-		return this.circumference;
+		return circumference;
 	}
 
 	/**
@@ -107,8 +100,9 @@ public class DoughnutOptions extends Options<DoughnutOptions> {
 	/**
 	 * @see #setAnimation(DoughnutAnimation)
 	 */
-	public DoughnutAnimation getAnimation() {
-	    return this.animation;
+	@Override
+    public DoughnutAnimation getAnimation() {
+	    return animation;
 	}
 
 	/**

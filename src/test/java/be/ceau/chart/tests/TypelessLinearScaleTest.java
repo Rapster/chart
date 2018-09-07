@@ -1,9 +1,5 @@
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import be.ceau.chart.LineChart;
 import be.ceau.chart.data.LineData;
 import be.ceau.chart.dataset.LineDataset;
@@ -13,6 +9,9 @@ import be.ceau.chart.options.scales.LinearScale;
 import be.ceau.chart.options.scales.LinearScales;
 import be.ceau.chart.options.ticks.LinearTicks;
 import be.ceau.chart.tests.util.Opener;
+import org.junit.Test;
+
+import java.io.IOException;
 
 /*
  * Debugging for https://github.com/mdewilde/chart/issues/11

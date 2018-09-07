@@ -17,8 +17,6 @@ package be.ceau.chart.enums;
 
 import java.util.Locale;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 public enum PointStyle {
 
 	CIRCLE,
@@ -43,13 +41,12 @@ public enum PointStyle {
 				sb.append(s.substring(1).toLowerCase(Locale.ENGLISH));
 			}
 		}
-		this.serialized = sb.toString();
+        serialized = sb.toString();
 	}
 
 	@Override
-	@JsonValue
 	public String toString() {
-		return this.serialized;
+		return serialized;
 	}
 	
 }

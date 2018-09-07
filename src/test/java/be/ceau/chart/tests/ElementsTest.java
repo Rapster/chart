@@ -1,10 +1,5 @@
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-import java.util.Arrays;
-
-import org.junit.Test;
-
 import be.ceau.chart.BarChart;
 import be.ceau.chart.LineChart;
 import be.ceau.chart.color.Color;
@@ -14,12 +9,12 @@ import be.ceau.chart.dataset.BarDataset;
 import be.ceau.chart.dataset.LineDataset;
 import be.ceau.chart.options.BarOptions;
 import be.ceau.chart.options.LineOptions;
-import be.ceau.chart.options.elements.Line;
-import be.ceau.chart.options.elements.LineElements;
-import be.ceau.chart.options.elements.Point;
-import be.ceau.chart.options.elements.Rectangle;
-import be.ceau.chart.options.elements.RectangleElements;
+import be.ceau.chart.options.elements.*;
 import be.ceau.chart.tests.util.Opener;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.util.Arrays;
 
 public class ElementsTest {
 

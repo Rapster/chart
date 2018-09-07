@@ -15,18 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import java.util.Locale;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.javascript.JavaScriptFunction;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.util.Locale;
+
 public class Legend {
 
 	/**
@@ -58,7 +50,7 @@ public class Legend {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-	    return this.display;
+	    return display;
 	}
 
 	/**
@@ -75,7 +67,7 @@ public class Legend {
 	 * @see #setPosition(Legend.Position)
 	 */
 	public Position getPosition() {
-	    return this.position;
+	    return position;
 	}
 
 	/**
@@ -92,7 +84,7 @@ public class Legend {
 	 * @see #setFullWidth(Boolean)
 	 */
 	public Boolean getFullWidth() {
-	    return this.fullWidth;
+	    return fullWidth;
 	}
 
 	/**
@@ -109,7 +101,7 @@ public class Legend {
 	 * @see #setOnClick(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getOnClick() {
-	    return this.onClick;
+	    return onClick;
 	}
 
 	/**
@@ -126,7 +118,7 @@ public class Legend {
 	 * @see #setLabels(LegendLabels)
 	 */
 	public LegendLabels getLabels() {
-	    return this.labels;
+	    return labels;
 	}
 
 	/**
@@ -149,15 +141,13 @@ public class Legend {
 		private final String serialized;
 
 		private Position() {
-			this.serialized = name().toLowerCase(Locale.ENGLISH);
+			serialized = name().toLowerCase(Locale.ENGLISH);
 		}
 
 		@Override
-		@JsonValue
 		public String toString() {
-			return this.serialized;
+			return serialized;
 		}
-
 	}
 	
 }

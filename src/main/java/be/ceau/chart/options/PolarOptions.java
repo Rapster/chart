@@ -15,19 +15,12 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.javascript.JavaScriptFunction;
 import be.ceau.chart.options.animation.PolarAnimation;
 import be.ceau.chart.options.elements.ArcElements;
 import be.ceau.chart.options.scales.RadialLinearScale;
 import be.ceau.chart.options.scales.Scale;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class PolarOptions extends Options<PolarOptions> {
 
 	/**
@@ -65,7 +58,7 @@ public class PolarOptions extends Options<PolarOptions> {
 	 * @see #setScale(RadialLinearScale)
 	 */
 	public RadialLinearScale getScale() {
-		return this.scale;
+		return scale;
 	}
 
 	/**
@@ -80,8 +73,9 @@ public class PolarOptions extends Options<PolarOptions> {
 	/**
 	 * @see #setAnimation(PolarAnimation)
 	 */
+	@Override
 	public PolarAnimation getAnimation() {
-		return this.animation;
+		return animation;
 	}
 
 	/**
@@ -95,13 +89,15 @@ public class PolarOptions extends Options<PolarOptions> {
 	/**
 	 * @see #setLegendCallback(JavaScriptFunction legendCallback)
 	 */
+	@Override
 	public JavaScriptFunction getLegendCallback() {
-		return this.legendCallback;
+		return legendCallback;
 	}
 
 	/**
 	 * Generates the HTML legend via calls to generateLegend
 	 */
+	@Override
 	public PolarOptions setLegendCallback(JavaScriptFunction legendCallback) {
 		this.legendCallback = legendCallback;
 		return this;

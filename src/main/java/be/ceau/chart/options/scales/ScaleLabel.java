@@ -15,23 +15,16 @@
 */
 package be.ceau.chart.options.scales;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.FontStyle;
+
+import java.math.BigDecimal;
 
 /**
  * The grid line configuration is nested under the scale configuration in the
  * scaleLabel key. It defines options for the scale title.
  * 
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class ScaleLabel {
 
 	/**
@@ -68,7 +61,7 @@ public class ScaleLabel {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-	    return this.display;
+	    return display;
 	}
 
 	/**
@@ -85,7 +78,7 @@ public class ScaleLabel {
 	 * @see #setLabelString(String)
 	 */
 	public String getLabelString() {
-	    return this.labelString;
+	    return labelString;
 	}
 
 	/**
@@ -106,7 +99,7 @@ public class ScaleLabel {
 	 * @see #setFontColor(Color)
 	 */
 	public Color getFontColor() {
-	    return this.fontColor;
+	    return fontColor;
 	}
 
 	/**
@@ -127,7 +120,7 @@ public class ScaleLabel {
 	 * @see #setFontFamily(String)
 	 */
 	public String getFontFamily() {
-	    return this.fontFamily;
+	    return fontFamily;
 	}
 
 	/**
@@ -148,7 +141,7 @@ public class ScaleLabel {
 	 * @see #setFontSize(BigDecimal)
 	 */
 	public BigDecimal getFontSize() {
-	    return this.fontSize;
+	    return fontSize;
 	}
 
 	/**
@@ -169,7 +162,7 @@ public class ScaleLabel {
 	 * @see #setFontStyle(FontStyle)
 	 */
 	public FontStyle getFontStyle() {
-	    return this.fontStyle;
+	    return fontStyle;
 	}
 
 	/**

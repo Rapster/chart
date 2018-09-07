@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options.scales;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.ticks.Ticks;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.math.BigDecimal;
+
 public class XAxis<T extends Ticks<T>> {
 
 	/**
@@ -101,7 +94,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setType(String type)
 	 */
 	public String getType() {
-		return this.type;
+		return type;
 	}
 
 	/**
@@ -116,7 +109,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setDisplay(Boolean display)
 	 */
 	public Boolean getDisplay() {
-		return this.display;
+		return display;
 	}
 
 	/**
@@ -131,7 +124,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setId(String id)
 	 */
 	public String getId() {
-		return this.id;
+		return id;
 	}
 
 	/**
@@ -146,7 +139,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setStacked(Boolean stacked)
 	 */
 	public Boolean getStacked() {
-		return this.stacked;
+		return stacked;
 	}
 
 	/**
@@ -161,7 +154,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setCategoryPercentage(BigDecimal categoryPercentage)
 	 */
 	public BigDecimal getCategoryPercentage() {
-		return this.categoryPercentage;
+		return categoryPercentage;
 	}
 
 	/**
@@ -177,7 +170,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setBarPercentage(BigDecimal barPercentage)
 	 */
 	public BigDecimal getBarPercentage() {
-		return this.barPercentage;
+		return barPercentage;
 	}
 
 	/**
@@ -194,7 +187,7 @@ public class XAxis<T extends Ticks<T>> {
 	 * @see #setGridLines(GridLines gridLines)
 	 */
 	public GridLines getGridLines() {
-		return this.gridLines;
+		return gridLines;
 	}
 
 	/**

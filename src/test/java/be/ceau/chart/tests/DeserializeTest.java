@@ -1,14 +1,11 @@
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-import java.util.Scanner;
-
+import be.ceau.chart.BarChart;
+import be.ceau.chart.gson.GSON;
 import org.junit.Test;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
-
-import be.ceau.chart.BarChart;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class DeserializeTest {
 
@@ -18,12 +15,10 @@ public class DeserializeTest {
 
 			Scanner scanner = new Scanner(getClass().getResource("/chart.json").openStream());
 			String text = scanner.useDelimiter("\\A").next();
-			scanner.close(); 
+			scanner.close();
 
-			ObjectReader reader = new ObjectMapper().readerFor(BarChart.class);
-			
-			BarChart barChart = reader.readValue(text);
-			
+
+			BarChart barChart = GSON.INSTANCE.fromJson(text, BarChart.class);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

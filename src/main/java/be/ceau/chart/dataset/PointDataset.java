@@ -1,14 +1,13 @@
 package be.ceau.chart.dataset;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.BorderCapStyle;
 import be.ceau.chart.enums.BorderJoinStyle;
 import be.ceau.chart.enums.PointStyle;
 import be.ceau.chart.objects.OptionalArray;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T, O> {
 
@@ -116,7 +115,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setLabel(String)
 	 */
 	public String getLabel() {
-		return this.label;
+		return label;
 	}
 
 	/**
@@ -132,7 +131,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setFill(Boolean)
 	 */
 	public Boolean getFill() {
-		return this.fill;
+		return fill;
 	}
 
 	/**
@@ -148,7 +147,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setLineTension(Float)
 	 */
 	public Float getLineTension() {
-		return this.lineTension;
+		return lineTension;
 	}
 
 	/**
@@ -164,7 +163,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBackgroundColor(Color)
 	 */
 	public Color getBackgroundColor() {
-		return this.backgroundColor;
+		return backgroundColor;
 	}
 
 	/**
@@ -180,7 +179,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderWidth(Integer)
 	 */
 	public Integer getBorderWidth() {
-		return this.borderWidth;
+		return borderWidth;
 	}
 
 	/**
@@ -196,7 +195,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderColor(Color)
 	 */
 	public Color getBorderColor() {
-		return this.borderColor;
+		return borderColor;
 	}
 
 	/**
@@ -212,7 +211,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderCapStyle(BorderCapStyle)
 	 */
 	public BorderCapStyle getBorderCapStyle() {
-		return this.borderCapStyle;
+		return borderCapStyle;
 	}
 
 	/**
@@ -234,7 +233,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderDash(List)
 	 */
 	public List<Integer> getBorderDash() {
-		return this.borderDash;
+		return borderDash;
 	}
 
 	/**
@@ -266,7 +265,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderDashOffset(Float)
 	 */
 	public Float getBorderDashOffset() {
-		return this.borderDashOffset;
+		return borderDashOffset;
 	}
 
 	/**
@@ -283,7 +282,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setBorderJoinStyle(BorderJoinStyle)
 	 */
 	public BorderJoinStyle getBorderJoinStyle() {
-		return this.borderJoinStyle;
+		return borderJoinStyle;
 	}
 
 	/**
@@ -314,7 +313,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointBorderColor(List)
 	 */
 	public List<Color> getPointBorderColor() {
-		return this.pointBorderColor;
+		return pointBorderColor;
 	}
 
 	/**
@@ -342,7 +341,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointBackgroundColor(List)
 	 */
 	public List<Color> getPointBackgroundColor() {
-		return this.pointBackgroundColor;
+		return pointBackgroundColor;
 	}
 
 	/**
@@ -370,7 +369,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointBorderWidth(List)
 	 */
 	public List<Integer> getPointBorderWidth() {
-		return this.pointBorderWidth;
+		return pointBorderWidth;
 	}
 
 	/**
@@ -398,7 +397,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointRadius(List)
 	 */
 	public List<Integer> getPointRadius() {
-		return this.pointRadius;
+		return pointRadius;
 	}
 
 	/**
@@ -426,7 +425,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointHoverRadius(List)
 	 */
 	public List<Integer> getPointHoverRadius() {
-		return this.pointHoverRadius;
+		return pointHoverRadius;
 	}
 
 	/**
@@ -454,7 +453,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointHitRadius(List)
 	 */
 	public List<Integer> getPointHitRadius() {
-		return this.pointHitRadius;
+		return pointHitRadius;
 	}
 
 	/**
@@ -482,7 +481,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointHoverBackgroundColor(List)
 	 */
 	public List<Color> getPointHoverBackgroundColor() {
-		return this.pointHoverBackgroundColor;
+		return pointHoverBackgroundColor;
 	}
 
 	/**
@@ -510,7 +509,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointHoverBorderColor(List)
 	 */
 	public List<Color> getPointHoverBorderColor() {
-		return this.pointHoverBorderColor;
+		return pointHoverBorderColor;
 	}
 
 	/**
@@ -538,7 +537,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointHoverBorderWidth(List)
 	 */
 	public List<Integer> getPointHoverBorderWidth() {
-		return this.pointHoverBorderWidth;
+		return pointHoverBorderWidth;
 	}
 
 	/**
@@ -566,7 +565,7 @@ public abstract class PointDataset<T extends Dataset<T, O>, O> extends Dataset<T
 	 * @see #setPointStyle(List)
 	 */
 	public List<PointStyle> getPointStyle() {
-		return this.pointStyle;
+		return pointStyle;
 	}
 
 	/**

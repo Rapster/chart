@@ -15,15 +15,8 @@
 */
 package be.ceau.chart.options.scales;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.ticks.Ticks;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class YAxis<T extends Ticks<T>> {
 
 	/**
@@ -78,7 +71,7 @@ public class YAxis<T extends Ticks<T>> {
 	 * @see #setType(String type)
 	 */
 	public String getType() {
-		return this.type;
+		return type;
 	}
 
 	/**
@@ -93,7 +86,7 @@ public class YAxis<T extends Ticks<T>> {
 	 * @see #setDisplay(Boolean display)
 	 */
 	public Boolean getDisplay() {
-		return this.display;
+		return display;
 	}
 
 	/**
@@ -108,7 +101,7 @@ public class YAxis<T extends Ticks<T>> {
 	 * @see #setId(String id)
 	 */
 	public String getId() {
-		return this.id;
+		return id;
 	}
 
 	/**
@@ -123,7 +116,7 @@ public class YAxis<T extends Ticks<T>> {
 	 * @see #setStacked(Boolean stacked)
 	 */
 	public Boolean getStacked() {
-		return this.stacked;
+		return stacked;
 	}
 
 	/**

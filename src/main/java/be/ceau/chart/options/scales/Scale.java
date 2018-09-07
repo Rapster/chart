@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options.scales;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.enums.ScalesPosition;
 import be.ceau.chart.javascript.JavaScriptFunction;
 import be.ceau.chart.options.ticks.Ticks;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public abstract class Scale<T extends Scale<T>> {
 
 	/**
@@ -127,7 +120,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-		return this.display;
+		return display;
 	}
 
 	/**
@@ -150,7 +143,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setPosition(ScalesPosition)
 	 */
 	public ScalesPosition getPosition() {
-		return this.position;
+		return position;
 	}
 
 	/**
@@ -173,7 +166,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setId(String)
 	 */
 	public String getId() {
-		return this.id;
+		return id;
 	}
 
 	/**
@@ -198,7 +191,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeUpdate(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeUpdate() {
-		return this.beforeUpdate;
+		return beforeUpdate;
 	}
 
 	/**
@@ -221,7 +214,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeSetDimensions(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeSetDimensions() {
-		return this.beforeSetDimensions;
+		return beforeSetDimensions;
 	}
 
 	/**
@@ -244,7 +237,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterSetDimensions(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterSetDimensions() {
-		return this.afterSetDimensions;
+		return afterSetDimensions;
 	}
 
 	/**
@@ -267,7 +260,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeDataLimits(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeDataLimits() {
-		return this.beforeDataLimits;
+		return beforeDataLimits;
 	}
 
 	/**
@@ -290,7 +283,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterDataLimits(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterDataLimits() {
-		return this.afterDataLimits;
+		return afterDataLimits;
 	}
 
 	/**
@@ -313,7 +306,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeBuildTicks(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeBuildTicks() {
-		return this.beforeBuildTicks;
+		return beforeBuildTicks;
 	}
 
 	/**
@@ -336,7 +329,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterBuildTicks(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterBuildTicks() {
-		return this.afterBuildTicks;
+		return afterBuildTicks;
 	}
 
 	/**
@@ -359,7 +352,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeTickToLabelConversion(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeTickToLabelConversion() {
-		return this.beforeTickToLabelConversion;
+		return beforeTickToLabelConversion;
 	}
 
 	/**
@@ -382,7 +375,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterTickToLabelConversion(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterTickToLabelConversion() {
-		return this.afterTickToLabelConversion;
+		return afterTickToLabelConversion;
 	}
 
 	/**
@@ -405,7 +398,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeCalculateTickRotation(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeCalculateTickRotation() {
-		return this.beforeCalculateTickRotation;
+		return beforeCalculateTickRotation;
 	}
 
 	/**
@@ -428,7 +421,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterCalculateTickRotation(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterCalculateTickRotation() {
-		return this.afterCalculateTickRotation;
+		return afterCalculateTickRotation;
 	}
 
 	/**
@@ -451,7 +444,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setBeforeFit(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getBeforeFit() {
-		return this.beforeFit;
+		return beforeFit;
 	}
 
 	/**
@@ -474,7 +467,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterFit(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterFit() {
-		return this.afterFit;
+		return afterFit;
 	}
 
 	/**
@@ -497,7 +490,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setAfterUpdate(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getAfterUpdate() {
-		return this.afterUpdate;
+		return afterUpdate;
 	}
 
 	/**
@@ -520,7 +513,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setGridLines(GridLines)
 	 */
 	public GridLines getGridLines() {
-		return this.gridLines;
+		return gridLines;
 	}
 
 	/**
@@ -542,7 +535,7 @@ public abstract class Scale<T extends Scale<T>> {
 	 * @see #setScaleLabel(ScaleLabel)
 	 */
 	public ScaleLabel getScaleLabel() {
-		return this.scaleLabel;
+		return scaleLabel;
 	}
 
 	/**

@@ -15,20 +15,13 @@
 */
 package be.ceau.chart.data;
 
+import be.ceau.chart.dataset.BubbleDataset;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-import be.ceau.chart.dataset.BubbleDataset;
-
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class BubbleData {
 
 	private final List<BubbleDataset> datasets = new ArrayList<BubbleDataset>();
@@ -60,15 +53,15 @@ public class BubbleData {
 	}
 
 	public BubbleData clearDatasets() {
-		this.datasets.clear();
+		datasets.clear();
 		if (datasets != null) {
-			this.datasets.addAll(datasets);
+			datasets.addAll(datasets);
 		}
 		return this;
 	}
 
 	public BubbleData addDataset(BubbleDataset dataset) {
-		this.datasets.add(dataset);
+		datasets.add(dataset);
 		return this;
 	}
 

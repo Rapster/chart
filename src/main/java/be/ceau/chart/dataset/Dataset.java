@@ -15,11 +15,7 @@
 */
 package be.ceau.chart.dataset;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public abstract class Dataset<T extends Dataset<T, O>, O> {
 
@@ -33,7 +29,7 @@ public abstract class Dataset<T extends Dataset<T, O>, O> {
 	 *         never {@code null}
 	 */
 	public List<O> getData() {
-		return Collections.unmodifiableList(this.data);
+		return Collections.unmodifiableList(data);
 	}
 
 	/**
@@ -73,7 +69,7 @@ public abstract class Dataset<T extends Dataset<T, O>, O> {
 	 */
 	@SuppressWarnings("unchecked")
 	public T clearData() {
-		this.data.clear();
+        data.clear();
 		return (T) this;
 	}
 

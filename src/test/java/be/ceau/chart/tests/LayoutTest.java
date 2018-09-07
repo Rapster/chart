@@ -15,10 +15,6 @@
 */
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import be.ceau.chart.BarChart;
 import be.ceau.chart.color.Color;
 import be.ceau.chart.data.BarData;
@@ -27,6 +23,9 @@ import be.ceau.chart.options.BarOptions;
 import be.ceau.chart.options.layout.Layout;
 import be.ceau.chart.options.layout.Padding;
 import be.ceau.chart.tests.util.Opener;
+import org.junit.Test;
+
+import java.io.IOException;
 
 public class LayoutTest {
 

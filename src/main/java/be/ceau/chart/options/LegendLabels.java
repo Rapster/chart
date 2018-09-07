@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.FontStyle;
 import be.ceau.chart.javascript.JavaScriptFunction;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class LegendLabels {
 	
 	/**
@@ -72,7 +65,7 @@ public class LegendLabels {
 	 * @see #setBoxWidth(Integer)
 	 */
 	public Integer getBoxWidth() {
-	    return this.boxWidth;
+	    return boxWidth;
 	}
 
 	/**
@@ -93,7 +86,7 @@ public class LegendLabels {
 	 * @see #setFontSize(Integer)
 	 */
 	public Integer getFontSize() {
-	    return this.fontSize;
+	    return fontSize;
 	}
 
 	/**
@@ -114,7 +107,7 @@ public class LegendLabels {
 	 * @see #setFontStyle(FontStyle)
 	 */
 	public FontStyle getFontStyle() {
-	    return this.fontStyle;
+	    return fontStyle;
 	}
 
 	/**
@@ -135,7 +128,7 @@ public class LegendLabels {
 	 * @see #setFontColor(Color)
 	 */
 	public Color getFontColor() {
-	    return this.fontColor;
+	    return fontColor;
 	}
 
 	/**
@@ -156,7 +149,7 @@ public class LegendLabels {
 	 * @see #setFontFamily(String)
 	 */
 	public String getFontFamily() {
-	    return this.fontFamily;
+	    return fontFamily;
 	}
 
 	/**
@@ -177,7 +170,7 @@ public class LegendLabels {
 	 * @see #setPadding(Integer)
 	 */
 	public Integer getPadding() {
-	    return this.padding;
+	    return padding;
 	}
 
 	/**
@@ -198,7 +191,7 @@ public class LegendLabels {
 	 * @see #setGenerateLabels(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getGenerateLabels() {
-	    return this.generateLabels;
+	    return generateLabels;
 	}
 
 	/**
@@ -219,7 +212,7 @@ public class LegendLabels {
 	 * @see #setUsePointStyle(Boolean)
 	 */
 	public Boolean getUsePointStyle() {
-	    return this.usePointStyle;
+	    return usePointStyle;
 	}
 
 	/**

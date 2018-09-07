@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.elements.LineElements;
 import be.ceau.chart.options.scales.LinearScales;
 import be.ceau.chart.options.scales.Scale;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class LineOptions extends Options<LineOptions> {
 	
 	/**
@@ -59,7 +52,7 @@ public class LineOptions extends Options<LineOptions> {
 	 * @see #setShowLines(Boolean)
 	 */
 	public Boolean getShowLines() {
-		return this.showLines;
+		return showLines;
 	}
 
 	/**
@@ -80,7 +73,7 @@ public class LineOptions extends Options<LineOptions> {
 	 * @see #setSpanGaps(Boolean)
 	 */
 	public Boolean getSpanGaps() {
-		return this.spanGaps;
+		return spanGaps;
 	}
 
 	/**

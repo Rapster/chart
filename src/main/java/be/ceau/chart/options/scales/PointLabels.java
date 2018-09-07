@@ -15,24 +15,17 @@
 */
 package be.ceau.chart.options.scales;
 
-import java.math.BigDecimal;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.FontStyle;
 import be.ceau.chart.javascript.JavaScriptFunction;
+
+import java.math.BigDecimal;
 
 /**
  * The following options are used to configure the point labels that are shown
  * on the perimeter of the scale. They can be found in the pointLabels sub
  * options. Note that these options only apply if lineArc is false.
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class PointLabels {
 
 	/**
@@ -64,7 +57,7 @@ public class PointLabels {
 	 * @see #setCallback(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getCallback() {
-	    return this.callback;
+	    return callback;
 	}
 
 	/**
@@ -85,7 +78,7 @@ public class PointLabels {
 	 * @see #setFontColor(Color)
 	 */
 	public Color getFontColor() {
-	    return this.fontColor;
+	    return fontColor;
 	}
 
 	/**
@@ -106,7 +99,7 @@ public class PointLabels {
 	 * @see #setFontFamily(String)
 	 */
 	public String getFontFamily() {
-	    return this.fontFamily;
+	    return fontFamily;
 	}
 
 	/**
@@ -127,7 +120,7 @@ public class PointLabels {
 	 * @see #setFontSize(BigDecimal)
 	 */
 	public BigDecimal getFontSize() {
-	    return this.fontSize;
+	    return fontSize;
 	}
 
 	/**
@@ -148,7 +141,7 @@ public class PointLabels {
 	 * @see #setFontStyle(FontStyle)
 	 */
 	public FontStyle getFontStyle() {
-	    return this.fontStyle;
+	    return fontStyle;
 	}
 
 	/**

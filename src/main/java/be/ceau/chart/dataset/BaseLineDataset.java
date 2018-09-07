@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.dataset;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.objects.OptionalArray;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.util.List;
+
 public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends PointDataset<T, O> {
 
 	/**
@@ -62,7 +55,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	 * @see #setXAxisID(String)
 	 */
 	public String getXAxisID() {
-		return this.xAxisID;
+		return xAxisID;
 	}
 
 	/**
@@ -79,7 +72,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	 * @see #setYAxisID(String)
 	 */
 	public String getYAxisID() {
-		return this.yAxisID;
+		return yAxisID;
 	}
 
 	/**
@@ -95,13 +88,15 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	/**
 	 * @see #setPointHitRadius(List)
 	 */
+	@Override
 	public List<Integer> getPointHitRadius() {
-		return this.pointHitRadius;
+		return pointHitRadius;
 	}
 
 	/**
 	 * @see #setPointHitRadius(List)
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public T addPointHitRadius(Integer pointHitRadius) {
 		this.pointHitRadius.add(pointHitRadius);
@@ -111,6 +106,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	/**
 	 * The pixel size of the non-displayed point that reacts to mouse events
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public T setPointHitRadius(List<Integer> pointHitRadius) {
 		this.pointHitRadius.clear();
@@ -124,7 +120,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	 * @see #setShowLine(Boolean)
 	 */
 	public Boolean getShowLine() {
-		return this.showLine;
+		return showLine;
 	}
 
 	/**
@@ -140,7 +136,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	 * @see #setSpanGaps(Boolean)
 	 */
 	public Boolean getSpanGaps() {
-		return this.spanGaps;
+		return spanGaps;
 	}
 
 	/**
@@ -156,7 +152,7 @@ public abstract class BaseLineDataset<T extends PointDataset<T, O>, O> extends P
 	 * @see #setSteppedLine(Boolean)
 	 */
 	public Boolean getSteppedLine() {
-		return this.steppedLine;
+		return steppedLine;
 	}
 
 	/**

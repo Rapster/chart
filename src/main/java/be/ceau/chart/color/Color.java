@@ -15,10 +15,14 @@
  */
 package be.ceau.chart.color;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
+
+import java.lang.reflect.Type;
 import java.util.Locale;
 import java.util.Random;
-
-import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * Immutable RGBa color model.
@@ -149,9 +153,9 @@ public class Color {
 		if (!Color.isAlphaWithinBounds(alpha)) {
 			throw new IllegalArgumentException("alpha double argument is not within allowed bounds: allowed values are between 0 and 1 (inclusive), but value passed is " + alpha);
 		}
-		this.r = color.getR();
-		this.g = color.getG();
-		this.b = color.getB();
+		r = color.getR();
+		g = color.getG();
+		b = color.getB();
 		this.alpha = alpha;
 	}
 
@@ -231,7 +235,6 @@ public class Color {
 	/**
 	 * @return serialized version of this {@code Color}, as used for JSON.
 	 */
-	@JsonValue
 	public String rgba() {
 		return "rgba(" + r + "," + g + "," + b + "," + String.format(Locale.US, "%.3f", alpha) + ")";
 	}
@@ -274,4 +277,11 @@ public class Color {
 		return true;
 	}
 
+	public static class ColorSerializer implements JsonSerializer {
+
+		@Override
+		public JsonElement serialize(Object src, Type typeOfSrc, JsonSerializationContext context) {
+			return new JsonPrimitive(((Color)src).rgba());
+		}
+	}
 }

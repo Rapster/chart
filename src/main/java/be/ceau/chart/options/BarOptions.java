@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.options.elements.RectangleElements;
 import be.ceau.chart.options.scales.BarScale;
 import be.ceau.chart.options.scales.Scale;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class BarOptions extends Options<BarOptions> {
 
 	/**
@@ -46,6 +39,7 @@ public class BarOptions extends Options<BarOptions> {
 	 * @return {@link Hover} instance or {@code null}
 	 * @see #setHover(Hover)
 	 */
+	@Override
 	public Hover getHover() {
 		return hover;
 	}
@@ -63,6 +57,7 @@ public class BarOptions extends Options<BarOptions> {
 	 *            {@link Hover} instance or {@code null}
 	 * @return this {@link BarOptions} instance for method chaining
 	 */
+	@Override
 	public BarOptions setHover(Hover hover) {
 		this.hover = hover;
 		return this;

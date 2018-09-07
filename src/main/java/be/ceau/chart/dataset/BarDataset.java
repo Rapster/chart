@@ -15,20 +15,13 @@
 */
 package be.ceau.chart.dataset;
 
+import be.ceau.chart.enums.BorderSkipped;
+import be.ceau.chart.objects.OptionalArray;
+
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-import be.ceau.chart.enums.BorderSkipped;
-import be.ceau.chart.objects.OptionalArray;
-
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class BarDataset extends BackgroundBorderHoverDataset<BarDataset, BigDecimal> {
 
 	/**
@@ -55,7 +48,7 @@ public class BarDataset extends BackgroundBorderHoverDataset<BarDataset, BigDeci
 	 * @see #setLabel(String)
 	 */
 	public String getLabel() {
-	    return this.label;
+	    return label;
 	}
 
 	/**
@@ -70,7 +63,7 @@ public class BarDataset extends BackgroundBorderHoverDataset<BarDataset, BigDeci
 	 * @see #setXAxisID(String)
 	 */
 	public String getXAxisID() {
-	    return this.xAxisID;
+	    return xAxisID;
 	}
 
 	/**
@@ -85,7 +78,7 @@ public class BarDataset extends BackgroundBorderHoverDataset<BarDataset, BigDeci
 	 * @see #setYAxisID(String)
 	 */
 	public String getYAxisID() {
-	    return this.yAxisID;
+	    return yAxisID;
 	}
 
 	/**
@@ -100,7 +93,7 @@ public class BarDataset extends BackgroundBorderHoverDataset<BarDataset, BigDeci
 	 * @see #setBorderSkipped(List)
 	 */
 	public List<BorderSkipped> getBorderSkipped() {
-	    return this.borderSkipped;
+	    return borderSkipped;
 	}
 
 	/**

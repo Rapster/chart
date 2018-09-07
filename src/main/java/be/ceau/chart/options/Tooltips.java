@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.FontStyle;
 import be.ceau.chart.javascript.JavaScriptFunction;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Tooltips {
 
 	/**
@@ -172,7 +165,7 @@ public class Tooltips {
 	 * @see #setEnabled(Boolean)
 	 */
 	public Boolean getEnabled() {
-	    return this.enabled;
+	    return enabled;
 	}
 
 	/**
@@ -193,7 +186,7 @@ public class Tooltips {
 	 * @see #setCustom(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getCustom() {
-	    return this.custom;
+	    return custom;
 	}
 
 	/**
@@ -214,7 +207,7 @@ public class Tooltips {
 	 * @see #setMode(String)
 	 */
 	public String getMode() {
-	    return this.mode;
+	    return mode;
 	}
 
 	/**
@@ -235,7 +228,7 @@ public class Tooltips {
 	 * @see #setItemSort(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getItemSort() {
-	    return this.itemSort;
+	    return itemSort;
 	}
 
 	/**
@@ -256,7 +249,7 @@ public class Tooltips {
 	 * @see #setBackgroundColor(Color)
 	 */
 	public Color getBackgroundColor() {
-	    return this.backgroundColor;
+	    return backgroundColor;
 	}
 
 	/**
@@ -277,7 +270,7 @@ public class Tooltips {
 	 * @see #setTitleFontFamily(String)
 	 */
 	public String getTitleFontFamily() {
-	    return this.titleFontFamily;
+	    return titleFontFamily;
 	}
 
 	/**
@@ -298,7 +291,7 @@ public class Tooltips {
 	 * @see #setTitleFontSize(Integer)
 	 */
 	public Integer getTitleFontSize() {
-	    return this.titleFontSize;
+	    return titleFontSize;
 	}
 
 	/**
@@ -319,7 +312,7 @@ public class Tooltips {
 	 * @see #setTitleFontStyle(FontStyle)
 	 */
 	public FontStyle getTitleFontStyle() {
-	    return this.titleFontStyle;
+	    return titleFontStyle;
 	}
 
 	/**
@@ -340,7 +333,7 @@ public class Tooltips {
 	 * @see #setTitleFontColor(Color)
 	 */
 	public Color getTitleFontColor() {
-	    return this.titleFontColor;
+	    return titleFontColor;
 	}
 
 	/**
@@ -361,7 +354,7 @@ public class Tooltips {
 	 * @see #setTitleSpacing(Integer)
 	 */
 	public Integer getTitleSpacing() {
-	    return this.titleSpacing;
+	    return titleSpacing;
 	}
 
 	/**
@@ -382,7 +375,7 @@ public class Tooltips {
 	 * @see #setTitleMarginBottom(Integer)
 	 */
 	public Integer getTitleMarginBottom() {
-	    return this.titleMarginBottom;
+	    return titleMarginBottom;
 	}
 
 	/**
@@ -403,7 +396,7 @@ public class Tooltips {
 	 * @see #setBodyFontFamily(String)
 	 */
 	public String getBodyFontFamily() {
-	    return this.bodyFontFamily;
+	    return bodyFontFamily;
 	}
 
 	/**
@@ -424,7 +417,7 @@ public class Tooltips {
 	 * @see #setBodyFontSize(Integer)
 	 */
 	public Integer getBodyFontSize() {
-	    return this.bodyFontSize;
+	    return bodyFontSize;
 	}
 
 	/**
@@ -445,7 +438,7 @@ public class Tooltips {
 	 * @see #setBodyFontStyle(FontStyle)
 	 */
 	public FontStyle getBodyFontStyle() {
-	    return this.bodyFontStyle;
+	    return bodyFontStyle;
 	}
 
 	/**
@@ -466,7 +459,7 @@ public class Tooltips {
 	 * @see #setBodyFontColor(Color)
 	 */
 	public Color getBodyFontColor() {
-	    return this.bodyFontColor;
+	    return bodyFontColor;
 	}
 
 	/**
@@ -487,7 +480,7 @@ public class Tooltips {
 	 * @see #setBodySpacing(Integer)
 	 */
 	public Integer getBodySpacing() {
-	    return this.bodySpacing;
+	    return bodySpacing;
 	}
 
 	/**
@@ -508,7 +501,7 @@ public class Tooltips {
 	 * @see #setFooterFontFamily(String)
 	 */
 	public String getFooterFontFamily() {
-	    return this.footerFontFamily;
+	    return footerFontFamily;
 	}
 
 	/**
@@ -529,7 +522,7 @@ public class Tooltips {
 	 * @see #setFooterFontSize(Integer)
 	 */
 	public Integer getFooterFontSize() {
-	    return this.footerFontSize;
+	    return footerFontSize;
 	}
 
 	/**
@@ -550,7 +543,7 @@ public class Tooltips {
 	 * @see #setFooterFontStyle(FontStyle)
 	 */
 	public FontStyle getFooterFontStyle() {
-	    return this.footerFontStyle;
+	    return footerFontStyle;
 	}
 
 	/**
@@ -571,7 +564,7 @@ public class Tooltips {
 	 * @see #setFooterFontColor(Color)
 	 */
 	public Color getFooterFontColor() {
-	    return this.footerFontColor;
+	    return footerFontColor;
 	}
 
 	/**
@@ -592,7 +585,7 @@ public class Tooltips {
 	 * @see #setFooterSpacing(Integer)
 	 */
 	public Integer getFooterSpacing() {
-	    return this.footerSpacing;
+	    return footerSpacing;
 	}
 
 	/**
@@ -613,7 +606,7 @@ public class Tooltips {
 	 * @see #setFooterMarginTop(Integer)
 	 */
 	public Integer getFooterMarginTop() {
-	    return this.footerMarginTop;
+	    return footerMarginTop;
 	}
 
 	/**
@@ -634,7 +627,7 @@ public class Tooltips {
 	 * @see #setXPadding(Integer)
 	 */
 	public Integer getXPadding() {
-	    return this.xPadding;
+	    return xPadding;
 	}
 
 	/**
@@ -655,7 +648,7 @@ public class Tooltips {
 	 * @see #setYPadding(Integer)
 	 */
 	public Integer getYPadding() {
-	    return this.yPadding;
+	    return yPadding;
 	}
 
 	/**
@@ -676,7 +669,7 @@ public class Tooltips {
 	 * @see #setCaretSize(Integer)
 	 */
 	public Integer getCaretSize() {
-	    return this.caretSize;
+	    return caretSize;
 	}
 
 	/**
@@ -697,7 +690,7 @@ public class Tooltips {
 	 * @see #setCornerRadius(Integer)
 	 */
 	public Integer getCornerRadius() {
-	    return this.cornerRadius;
+	    return cornerRadius;
 	}
 
 	/**
@@ -718,7 +711,7 @@ public class Tooltips {
 	 * @see #setMultiKeyBackground(Color)
 	 */
 	public Color getMultiKeyBackground() {
-	    return this.multiKeyBackground;
+	    return multiKeyBackground;
 	}
 
 	/**

@@ -15,41 +15,25 @@
 */
 package be.ceau.chart.tests.util;
 
-import static be.ceau.chart.tests.util.Generator.maybe;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import be.ceau.chart.color.Color;
-import be.ceau.chart.data.BarData;
-import be.ceau.chart.data.DoughnutData;
-import be.ceau.chart.data.LineData;
-import be.ceau.chart.data.PieData;
-import be.ceau.chart.data.PolarData;
-import be.ceau.chart.data.RadarData;
+import be.ceau.chart.data.*;
 import be.ceau.chart.datapoint.BubbleDataPoint;
-import be.ceau.chart.dataset.BarDataset;
-import be.ceau.chart.dataset.DoughnutDataset;
-import be.ceau.chart.dataset.LineDataset;
-import be.ceau.chart.dataset.PieDataset;
-import be.ceau.chart.dataset.PolarDataset;
-import be.ceau.chart.dataset.RadarDataset;
+import be.ceau.chart.dataset.*;
 import be.ceau.chart.enums.BorderSkipped;
 import be.ceau.chart.enums.FontFamily;
 import be.ceau.chart.enums.ScalesPosition;
 import be.ceau.chart.javascript.JavaScriptFunction;
 import be.ceau.chart.options.scales.LinearScale;
 import be.ceau.chart.options.scales.LinearScales;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.util.*;
+import java.util.Map.Entry;
+
+import static be.ceau.chart.tests.util.Generator.maybe;
 
 /**
  * Factory for randomized test instances of common Chart objects.

@@ -15,18 +15,11 @@
 */
 package be.ceau.chart.options.scales;
 
+import be.ceau.chart.options.ticks.LinearTicks;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-import be.ceau.chart.options.ticks.LinearTicks;
-
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class BarScale extends CategoryScale {
 
 	/**
@@ -71,8 +64,8 @@ public class BarScale extends CategoryScale {
 	 */
 	public BarScale addxAxes(XAxis<LinearTicks> xAxis) {
 		if (xAxis != null) {
-			this.xAxes.clear();
-			this.xAxes.add(xAxis);
+            xAxes.clear();
+            xAxes.add(xAxis);
 		}
 		return this;
 	}
@@ -107,7 +100,7 @@ public class BarScale extends CategoryScale {
 	 */
 	public BarScale addyAxes(YAxis<LinearTicks> yAxis) {
 		if (yAxis != null) {
-			this.yAxes.add(yAxis);
+            yAxes.add(yAxis);
 		}
 		return this;
 	}

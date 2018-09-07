@@ -15,11 +15,6 @@
 */
 package be.ceau.chart.options.elements;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.BorderSkipped;
 
@@ -32,8 +27,6 @@ import be.ceau.chart.enums.BorderSkipped;
  * overridden by the configuration attached to a dataset.
  * </p>
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Rectangle {
 
 	/**
@@ -60,7 +53,7 @@ public class Rectangle {
 	 * @see #setBackgroundColor(Color)
 	 */
 	public Color getBackgroundColor() {
-		return this.backgroundColor;
+		return backgroundColor;
 	}
 
 	/**
@@ -81,7 +74,7 @@ public class Rectangle {
 	 * @see #setBorderWidth(Integer)
 	 */
 	public Integer getBorderWidth() {
-		return this.borderWidth;
+		return borderWidth;
 	}
 
 	/**
@@ -102,7 +95,7 @@ public class Rectangle {
 	 * @see #setBorderColor(Color)
 	 */
 	public Color getBorderColor() {
-		return this.borderColor;
+		return borderColor;
 	}
 
 	/**
@@ -123,7 +116,7 @@ public class Rectangle {
 	 * @see #setBorderSkipped(BorderSkipped)
 	 */
 	public BorderSkipped getBorderSkipped() {
-		return this.borderSkipped;
+		return borderSkipped;
 	}
 
 	/**

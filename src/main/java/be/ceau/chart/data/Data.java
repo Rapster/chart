@@ -15,21 +15,10 @@
 */
 package be.ceau.chart.data;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.dataset.Dataset;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.util.*;
+
 public class Data<D extends Data<D, T, O>, T extends Dataset<T, O>, O> {
 
 	private final List<String> labels = new ArrayList<String>();
@@ -79,7 +68,7 @@ public class Data<D extends Data<D, T, O>, T extends Dataset<T, O>, O> {
 	 */
 	@SuppressWarnings("unchecked")
 	public D clearLabels() {
-		this.labels.clear();
+		labels.clear();
 		return (D) this;
 	}
 
@@ -90,7 +79,7 @@ public class Data<D extends Data<D, T, O>, T extends Dataset<T, O>, O> {
 	 */
 	@SuppressWarnings("unchecked")
 	public D addLabel(String label) {
-		this.labels.add(label);
+		labels.add(label);
 		return (D) this;
 	}
 
@@ -101,7 +90,7 @@ public class Data<D extends Data<D, T, O>, T extends Dataset<T, O>, O> {
 	 */
 	@SuppressWarnings("unchecked")
 	public D addLabels(String... label) {
-		this.labels.addAll(Arrays.asList(label));
+		labels.addAll(Arrays.asList(label));
 		return (D) this;
 	}
 	
@@ -130,7 +119,7 @@ public class Data<D extends Data<D, T, O>, T extends Dataset<T, O>, O> {
 	 */
 	@SuppressWarnings("unchecked")
 	public D addDataset(T dataset) {
-		this.datasets.add(dataset);
+		datasets.add(dataset);
 		return (D) this;
 	}
 

@@ -15,22 +15,15 @@
 */
 package be.ceau.chart.options;
 
-import java.util.Collection;
-import java.util.EnumSet;
-import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.enums.Event;
 import be.ceau.chart.javascript.JavaScriptFunction;
 import be.ceau.chart.options.animation.Animation;
 import be.ceau.chart.options.layout.Layout;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
+import java.util.Collection;
+import java.util.EnumSet;
+import java.util.Set;
+
 public class Options<T extends Options<T>> {
 
 	private Boolean responsive;
@@ -51,7 +44,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setResponsive(Boolean)
 	 */
 	public Boolean getResponsive() {
-		return this.responsive;
+		return responsive;
 	}
 
 	/**
@@ -67,7 +60,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setResponsiveAnimationDuration(Integer)
 	 */
 	public Integer getResponsiveAnimationDuration() {
-		return this.responsiveAnimationDuration;
+		return responsiveAnimationDuration;
 	}
 
 	/**
@@ -84,7 +77,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setMaintainAspectRatio(Boolean)
 	 */
 	public Boolean getMaintainAspectRatio() {
-		return this.maintainAspectRatio;
+		return maintainAspectRatio;
 	}
 
 	/**
@@ -101,7 +94,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setEvents(Collection)
 	 */
 	public Set<Event> getEvents() {
-		return this.events;
+		return events;
 	}
 
 	/**
@@ -122,7 +115,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setOnClick(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getOnClick() {
-		return this.onClick;
+		return onClick;
 	}
 
 	/**
@@ -140,7 +133,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setLegendCallback(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getLegendCallback() {
-		return this.legendCallback;
+		return legendCallback;
 	}
 
 	/**
@@ -158,7 +151,7 @@ public class Options<T extends Options<T>> {
 	 * @see #setOnResize(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getOnResize() {
-		return this.onResize;
+		return onResize;
 	}
 
 	/**

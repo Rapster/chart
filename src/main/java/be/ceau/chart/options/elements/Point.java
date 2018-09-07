@@ -15,11 +15,6 @@
 */
 package be.ceau.chart.options.elements;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.PointStyle;
 
@@ -33,8 +28,6 @@ import be.ceau.chart.enums.PointStyle;
  * overridden by the configuration attached to a dataset.
  * </p>
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Point {
 
 	/**
@@ -81,7 +74,7 @@ public class Point {
 	 * @see #setRadius(Integer)
 	 */
 	public Integer getRadius() {
-		return this.radius;
+		return radius;
 	}
 
 	/**
@@ -102,7 +95,7 @@ public class Point {
 	 * @see #setPointStyle(PointStyle)
 	 */
 	public PointStyle getPointStyle() {
-		return this.pointStyle;
+		return pointStyle;
 	}
 
 	/**
@@ -123,7 +116,7 @@ public class Point {
 	 * @see #setBackgroundColor(Color)
 	 */
 	public Color getBackgroundColor() {
-		return this.backgroundColor;
+		return backgroundColor;
 	}
 
 	/**
@@ -144,7 +137,7 @@ public class Point {
 	 * @see #setBorderWidth(Integer)
 	 */
 	public Integer getBorderWidth() {
-		return this.borderWidth;
+		return borderWidth;
 	}
 
 	/**
@@ -165,7 +158,7 @@ public class Point {
 	 * @see #setBorderColor(Color)
 	 */
 	public Color getBorderColor() {
-		return this.borderColor;
+		return borderColor;
 	}
 
 	/**
@@ -186,7 +179,7 @@ public class Point {
 	 * @see #setHitRadius(Integer)
 	 */
 	public Integer getHitRadius() {
-		return this.hitRadius;
+		return hitRadius;
 	}
 
 	/**
@@ -207,7 +200,7 @@ public class Point {
 	 * @see #setHoverRadius(Integer)
 	 */
 	public Integer getHoverRadius() {
-		return this.hoverRadius;
+		return hoverRadius;
 	}
 
 	/**
@@ -228,7 +221,7 @@ public class Point {
 	 * @see #setHoverBorderWidth(Integer)
 	 */
 	public Integer getHoverBorderWidth() {
-		return this.hoverBorderWidth;
+		return hoverBorderWidth;
 	}
 
 	/**

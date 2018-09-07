@@ -15,12 +15,11 @@
 */
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import be.ceau.chart.Chart;
 import be.ceau.chart.tests.util.Opener;
+import org.junit.Test;
+
+import java.io.IOException;
 
 /**
  * Abstract superclass for chart type specific test

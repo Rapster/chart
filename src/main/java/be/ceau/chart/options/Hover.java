@@ -15,16 +15,9 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.enums.HoverMode;
 import be.ceau.chart.javascript.JavaScriptFunction;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Hover {
 
 	/**
@@ -46,7 +39,7 @@ public class Hover {
 	 * @see #setMode(HoverMode)
 	 */
 	public HoverMode getMode() {
-		return this.mode;
+		return mode;
 	}
 
 	/**
@@ -76,7 +69,7 @@ public class Hover {
 	 * @see #setAnimationDuration(Integer)
 	 */
 	public Integer getAnimationDuration() {
-		return this.animationDuration;
+		return animationDuration;
 	}
 
 	/**
@@ -93,7 +86,7 @@ public class Hover {
 	 * @see #setOnHover(JavaScriptFunction)
 	 */
 	public JavaScriptFunction getOnHover() {
-		return this.onHover;
+		return onHover;
 	}
 
 	/**

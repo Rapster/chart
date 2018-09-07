@@ -15,16 +15,11 @@
 */
 package be.ceau.chart.dataset;
 
-import java.util.List;
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.datapoint.BubbleDataPoint;
 import be.ceau.chart.objects.OptionalArray;
+
+import java.util.List;
 
 /**
  * <p>
@@ -37,8 +32,6 @@ import be.ceau.chart.objects.OptionalArray;
  * </p>
  *
  */
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> {
 
 	/**
@@ -56,6 +49,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * its corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setBackgroundColor(List<Color> backgroundColor) {
 		return super.setBackgroundColor(backgroundColor);
 	}
@@ -70,6 +64,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setBorderColor(List<Color> borderColor) {
 		return super.setBorderColor(borderColor);
 	}
@@ -84,6 +79,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * its corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setBorderWidth(List<Integer> borderWidth) {
 		return super.setBorderWidth(borderWidth);
 	}
@@ -98,6 +94,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * at its corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setHoverBackgroundColor(List<Color> hoverBackgroundColor) {
 		return super.setHoverBackgroundColor(hoverBackgroundColor);
 	}
@@ -112,6 +109,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * its corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setHoverBorderColor(List<Color> hoverBorderColor) {
 		return super.setHoverBorderColor(hoverBorderColor);
 	}
@@ -126,6 +124,7 @@ public class BubbleDataset extends RoundDataset<BubbleDataset, BubbleDataPoint> 
 	 * its corresponding index.
 	 * </p>
 	 */
+	@Override
 	public BubbleDataset setHoverBorderWidth(List<Integer> hoverBorderWidth) {
 		return super.setHoverBorderWidth(hoverBorderWidth);
 	}

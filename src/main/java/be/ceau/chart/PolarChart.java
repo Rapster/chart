@@ -15,27 +15,14 @@
 */
 package be.ceau.chart;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-
 import be.ceau.chart.data.Data;
 import be.ceau.chart.data.PolarData;
 import be.ceau.chart.dataset.PolarDataset;
+import be.ceau.chart.gson.GSON;
 import be.ceau.chart.options.Options;
 import be.ceau.chart.options.PolarOptions;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE)
 public class PolarChart implements Chart {
-
-	private static final ObjectWriter WRITER = new ObjectMapper()
-			.writerWithDefaultPrettyPrinter()
-			.forType(PolarChart.class);
 
 	/**
 	 * Static factory, constructs an {@link Data} implementation appropriate
@@ -100,11 +87,7 @@ public class PolarChart implements Chart {
 
 	@Override
 	public String toJson() {
-		try {
-			return WRITER.writeValueAsString(this);
-		} catch (JsonProcessingException e) {
-			throw new RuntimeException(e);
-		}
+		return GSON.INSTANCE.toJson(this);
 	}
 
 	/**

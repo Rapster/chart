@@ -17,13 +17,6 @@ package be.ceau.chart.options.ticks;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class LinearTicks extends Ticks<LinearTicks> {
 
 	/**
@@ -70,7 +63,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setBeginAtZero(Boolean)
 	 */
 	public Boolean getBeginAtZero() {
-		return this.beginAtZero;
+		return beginAtZero;
 	}
 
 	/**
@@ -91,7 +84,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setMin(BigDecimal)
 	 */
 	public BigDecimal getMin() {
-		return this.min;
+		return min;
 	}
 
 	/**
@@ -121,7 +114,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setMax(BigDecimal)
 	 */
 	public BigDecimal getMax() {
-		return this.max;
+		return max;
 	}
 
 	/**
@@ -151,7 +144,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setMaxTicksLimit(BigDecimal)
 	 */
 	public BigDecimal getMaxTicksLimit() {
-		return this.maxTicksLimit;
+		return maxTicksLimit;
 	}
 
 	/**
@@ -173,7 +166,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setFixedStepSize(BigDecimal)
 	 */
 	public BigDecimal getFixedStepSize() {
-		return this.fixedStepSize;
+		return fixedStepSize;
 	}
 
 	/**
@@ -197,7 +190,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setStepSize(BigDecimal)
 	 */
 	public BigDecimal getStepSize() {
-		return this.stepSize;
+		return stepSize;
 	}
 
 	/**
@@ -235,7 +228,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setSuggestedMax(BigDecimal)
 	 */
 	public BigDecimal getSuggestedMax() {
-		return this.suggestedMax;
+		return suggestedMax;
 	}
 
 	/**
@@ -257,7 +250,7 @@ public class LinearTicks extends Ticks<LinearTicks> {
 	 * @see #setSuggestedMin(BigDecimal)
 	 */
 	public BigDecimal getSuggestedMin() {
-		return this.suggestedMin;
+		return suggestedMin;
 	}
 
 	/**

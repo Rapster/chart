@@ -15,17 +15,10 @@
 */
 package be.ceau.chart.options;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import be.ceau.chart.color.Color;
 import be.ceau.chart.enums.FontStyle;
 import be.ceau.chart.enums.TitlePosition;
 
-@JsonInclude(Include.NON_EMPTY)
-@JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public class Title {
 
 	/**
@@ -77,7 +70,7 @@ public class Title {
 	 * @see #setDisplay(Boolean)
 	 */
 	public Boolean getDisplay() {
-		return this.display;
+		return display;
 	}
 
 	/**
@@ -98,7 +91,7 @@ public class Title {
 	 * @see #setPosition(TitlePosition)
 	 */
 	public TitlePosition getPosition() {
-		return this.position;
+		return position;
 	}
 
 	/**
@@ -119,7 +112,7 @@ public class Title {
 	 * @see #setFullWidth(Boolean)
 	 */
 	public Boolean getFullWidth() {
-		return this.fullWidth;
+		return fullWidth;
 	}
 
 	/**
@@ -141,7 +134,7 @@ public class Title {
 	 * @see #setFontSize(Integer)
 	 */
 	public Integer getFontSize() {
-		return this.fontSize;
+		return fontSize;
 	}
 
 	/**
@@ -162,7 +155,7 @@ public class Title {
 	 * @see #setFontFamily(String)
 	 */
 	public String getFontFamily() {
-		return this.fontFamily;
+		return fontFamily;
 	}
 
 	/**
@@ -183,7 +176,7 @@ public class Title {
 	 * @see #setFontColor(Color)
 	 */
 	public Color getFontColor() {
-		return this.fontColor;
+		return fontColor;
 	}
 
 	/**
@@ -204,7 +197,7 @@ public class Title {
 	 * @see #setFontStyle(FontStyle)
 	 */
 	public FontStyle getFontStyle() {
-		return this.fontStyle;
+		return fontStyle;
 	}
 
 	/**
@@ -226,7 +219,7 @@ public class Title {
 	 * @see #setPadding(Integer)
 	 */
 	public Integer getPadding() {
-		return this.padding;
+		return padding;
 	}
 
 	/**
@@ -247,7 +240,7 @@ public class Title {
 	 * @see #setText(String)
 	 */
 	public String getText() {
-		return this.text;
+		return text;
 	}
 
 	/**

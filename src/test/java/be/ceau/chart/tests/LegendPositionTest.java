@@ -15,10 +15,6 @@
 */
 package be.ceau.chart.tests;
 
-import java.io.IOException;
-
-import org.junit.Test;
-
 import be.ceau.chart.Chart;
 import be.ceau.chart.PieChart;
 import be.ceau.chart.color.Color;
@@ -28,6 +24,9 @@ import be.ceau.chart.options.Legend;
 import be.ceau.chart.options.Legend.Position;
 import be.ceau.chart.options.PieOptions;
 import be.ceau.chart.tests.util.Opener;
+import org.junit.Test;
+
+import java.io.IOException;
 
 /**
  * Test for issue #5

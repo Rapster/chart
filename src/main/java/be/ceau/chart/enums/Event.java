@@ -17,8 +17,6 @@ package be.ceau.chart.enums;
 
 import java.util.Locale;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
 /**
  * <p>
  * List of standard DOM events.
@@ -205,13 +203,12 @@ public enum Event {
 	private final String serialized;
 
 	private Event() {
-		this.serialized = name().toLowerCase(Locale.ENGLISH);
+		serialized = name().toLowerCase(Locale.ENGLISH);
 	}
 
 	@Override
-	@JsonValue
 	public String toString() {
-		return this.serialized;
+		return serialized;
 	}
 
 }
